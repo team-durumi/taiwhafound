@@ -1,0 +1,5 @@
+@media only screen and (max-width: 600px) {
+  #img_w202004299403ebcd20995, #img_w202004296819e316422a7, #img_w2020042991d5376537085, #img_w20200429f1f971b9ea812 {
+    display: none !important;
+  }
+}
