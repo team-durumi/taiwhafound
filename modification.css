@@ -6,6 +6,10 @@
   background-color: #7bbd26;
 }
 
+#visual_s202004203bc80f3af6ae5 span, p {
+  text-shadow: 0.5px 0 0 #383838, -0.5px 0 0 #383838, 0 0.5px 0 #383838, 0 -0.5px 0 #383838, 0.5px 0.5px #383838, -0.5px -0.5px 0 #383838, 0.5px -0.5px 0 #383838, -0.5px 0.5px 0 #383838;
+}
+
 @media only screen and (max-width: 600px) {
   #s20200420fa532045cb66b, #img_w202004299403ebcd20995, #img_w202004296819e316422a7, #img_w2020042991d5376537085, #img_w20200429f1f971b9ea812 {
     display: none !important;
