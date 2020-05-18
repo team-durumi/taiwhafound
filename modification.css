@@ -1,8 +1,4 @@
-#w20200517a26137bffa5c1, #w20200517585d9ce1a8705, #w20200517533ad60e2fbc2, #w20200517847f6e52df580, #w202005178aa4c42cd4f89, #w202005175df0cff7c8b40, #w20200517d74f89ff6c33c, #w202005175a4304c0be542, #img_w20200517a26137bffa5c1, #img_w20200517533ad60e2fbc2, #img_w202005178aa4c42cd4f89, #img_w20200517d74f89ff6c33c, #text_w20200517585d9ce1a8705, #text_w20200517847f6e52df580, #text_w202005175df0cff7c8b40, #text_w202005175a4304c0be542 {
-  display: none !important;
-}
-
-#w2020042943f17881da82c {
+#w2020042943f17881da82c, #w20200518e2eff8937d566 {
   background-color: #7bbd26;
 }
 
@@ -10,27 +6,34 @@
   text-shadow: 0.5px 0 0 #383838, -0.5px 0 0 #383838, 0 0.5px 0 #383838, 0 -0.5px 0 #383838, 0.5px 0.5px #383838, -0.5px -0.5px 0 #383838, 0.5px -0.5px 0 #383838, -0.5px 0.5px 0 #383838;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 990px) {
+  #visual_s202004203bc80f3af6ae5 h4 span {
+    font-size: 20px !important;
+  }
+
+  #visual_s202004203bc80f3af6ae5 p {
+    font-size: 10px;
+  }
+
   #s20200420fa532045cb66b, #img_w202004299403ebcd20995, #img_w202004296819e316422a7, #img_w2020042991d5376537085, #img_w20200429f1f971b9ea812 {
     display: none !important;
   }
 
-  #w20200517a26137bffa5c1, #w20200517585d9ce1a8705, #w20200517533ad60e2fbc2, #w20200517847f6e52df580, #w202005178aa4c42cd4f89, #w202005175df0cff7c8b40, #w20200517d74f89ff6c33c, #w202005175a4304c0be542, #img_w20200517a26137bffa5c1, #img_w20200517533ad60e2fbc2, #img_w202005178aa4c42cd4f89, #img_w20200517d74f89ff6c33c, #text_w20200517585d9ce1a8705, #text_w20200517847f6e52df580, #text_w202005175df0cff7c8b40, #text_w202005175a4304c0be542 {
-    display: block !important;
-  }
-
-
   /*mobile image wrapper*/
-  #w20200517a26137bffa5c1, #w20200517533ad60e2fbc2, #w202005178aa4c42cd4f89, #w20200517d74f89ff6c33c {
-    margin-bottom: 50px;
+  /*#w20200517a26137bffa5c1, #w20200517533ad60e2fbc2, #w202005178aa4c42cd4f89, #w20200517d74f89ff6c33c {*/
+  #s202005181a6e81f045259, #s2020051805ead9157817d, #s2020051855e6a9976e044, #s2020051897ec0c8ed2c0a {
+    height: 300px;
+    position: relative;
+    margin-bottom: 80px;
     border-top: solid 15px #f6f6f6;
   }
 
   /*mobile text wrapper*/
-  #w20200517585d9ce1a8705, #w20200517847f6e52df580, #w202005175df0cff7c8b40, #w202005175a4304c0be542 {
+  /*#w20200517585d9ce1a8705, #w20200517847f6e52df580, #w202005175df0cff7c8b40, #w202005175a4304c0be542 {*/
+  #w202005184a98776144005, #w202005183738d9a8f7760, #w2020051805be9a0cc61a9, #w2020051840a945f8c1857 {
     position: absolute;
-    z-index: 1000;
-    top: -120px;
+    z-index: 10;
+    top: 240px;
     background: rgb(255, 255, 255);
     width: calc(100% - 20px);
     height: 120px;
@@ -46,7 +49,8 @@
   }
 
   /*mobile text*/
-  #text_w20200517585d9ce1a8705, #text_w20200517847f6e52df580, #text_w202005175df0cff7c8b40, #text_w202005175a4304c0be542 {
+  /*#text_w20200517585d9ce1a8705, #text_w20200517847f6e52df580, #text_w202005175df0cff7c8b40, #text_w202005175a4304c0be542 {*/
+  #text_w202005184a98776144005, #text_w202005183738d9a8f7760, #text_w2020051805be9a0cc61a9, #text_w2020051840a945f8c1857 {
     margin-bottom: 10px;
     font-size: 16px;
     line-height: 20px !important;
@@ -54,21 +58,13 @@
     color: #2e2e2e;
   }
 
-  #text_w20200517585d9ce1a8705 a, #text_w20200517847f6e52df580 a, #text_w202005175df0cff7c8b40 a, #text_w202005175a4304c0be542 a {
+  /*#text_w20200517585d9ce1a8705 a, #text_w20200517847f6e52df580 a, #text_w202005175df0cff7c8b40 a, #text_w202005175a4304c0be542 a {*/
+  #text_w202005184a98776144005 a, #text_w202005183738d9a8f7760 a, #text_w2020051805be9a0cc61a9 a, #text_w2020051840a945f8c1857 a {
     display: block;
     padding-top: 10px;
   }
 
-  /*메인에 녹색 영역 */
-  #w2020042910897ed622a84 h4 span {
-    font-size: 20px !important;
-  }
-
-  #w2020042910897ed622a84 p {
-    display: none;
-  }
-
-/*  메인슬라이드 밑에 텍스트 섹션*/
+  /* 메인슬라이드 밑에 텍스트 섹션*/
   #visual_s20200518279a97e8a4366 .op._op{
     height: 150px;
   }
@@ -91,10 +87,4 @@
     width: 100% !important;
     text-align: right;
   }
-
-/*  #visual_s20200518279a97e8a4366 .button-section {
-    display: block !important;
-    width: 100%;
-
-  }
-*/}
+}
