@@ -1,0 +1,805 @@
+<!--[if lt IE 9]>
+<div class="browsehappy">오래된 브라우저를 사용하고 있군요. 안전하고 편리한 인터넷을 위해 <a href="http://browsehappy.com/" target="_blank">브라우저를 업그레이드</a> 하세요.</div>
+<style>
+  .browsehappy {
+    vertical-align: middle;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 13px;
+    background: #fb4637;
+    color: #fff;
+  }
+  .browsehappy > a {
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>
+<![endif]-->
+<div id="site_alarm_slidemenu_container" class="notification-canvas-container">
+    <div class="notification-canvas-backdrop" id="site_alarm_slidemenu_backdrop" style="display: none"></div>
+    <div id="site_alarm_slidemenu" class="notification-canvas alarm-pane alarm_slide" style="">
+
+        <div class="tse-scrollable _scroll_wrap">
+            <div class="tse-content tab-content _is_tse_content" style="padding-top: 60px;">
+                <div class="site-alarm-head _alarm_header">
+                    <header id="site_alarm_title">알림</header>
+                    <a href="javascript:;" class="text-btn" onclick="ALARM_MENU.toggleAlarmSetting()">설정</a>
+                    <a href="javascript:;" class="btn btn-flat goback " onclick="ALARM_MENU.showAlarmSlide();"><i
+                            class="btm bt-arrow-left" aria-hidden="true"></i><span class="sr-only">뒤로</span></a>
+                </div>
+                <div class="site-alarm-head _setting_header" style="display: none">
+                    <header id="site_alarm_title_setting">알림 설정</header>
+                    <a href="javascript:;" class="btn btn-flat goback " onclick="ALARM_MENU.toggleAlarmSetting();"><i
+                            class="btm bt-arrow-left" aria-hidden="true"></i><span class="sr-only">뒤로</span></a>
+                </div>
+                <div id="site_alarm_list_wrap" class="site_alarm_list_wrap">
+                    <!--알림 리스트-->
+
+                    <div id="site_alarm_tab" class="notify-body"></div>
+
+                    <div id="site_alarm_more_btn" class="notify-body" style="display: none;">
+                        <a class="tile more" href="javascript:;" onclick="ALARM_MENU.getHeaderAlarmList()">
+                            <div class="tile-content">
+                                더보기 </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div id="site_alarm_setting_wrap" style="display: none;" class="site_alarm_setting_wrap">
+
+                    <div class="offcanvas-block alarm-setting">
+                        <div class="_scroll_wrap" id="site_alarm_menu_tap_wrap">
+                            <div class="tab-content">
+                                <div class="tab-pane active">
+                                    <div class="notify-body">
+                                        <a href="javascript:;" class="board-alaram tile">게시물 알림</a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','my_post')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    내 글 반응 <div class="text-sm text-gray-bright">내가 작성한 게시물이나 댓글에 다른 사람이
+                                                        댓글이나 답글을 작성하면 알려줍니다.
+                                                    </div>
+                                                    <div class="check ">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="내 글 반응" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','notice')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    공지사항 <div class="text-sm text-gray-bright">사이트에서 보내는 중요한 공지를 실시간으로
+                                                        알려줍니다.</div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="공지사항" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:;" class="board-alaram tile" style="padding-top:48px">관리자용
+                                            설정</a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','new_post')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    새 글 알림 <div class="text-sm text-gray-bright">사이트에 등록되는 모든 게시물에 대해
+                                                        알림을 받습니다.</div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="새 글 알림" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','new_comment')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    새 댓글 알림 <div class="text-sm text-gray-bright">사이트의 새로운 모든 댓글에 대해 알림을
+                                                        받습니다.</div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="새 댓글 알림" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','new_member')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    새 회원 알림 <div class="text-sm text-gray-bright">새로운 회원이 추가되면 알림을 받습니다.
+                                                    </div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="새 회원 알림" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','new_form')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    새 입력폼 알림 <div class="text-sm text-gray-bright">사이트의 새로운 모든 입력폼에 대해
+                                                        알림을 받습니다.</div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="새 입력폼 알림" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','new_shop_review')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    새 구매평 알림 <div class="text-sm text-gray-bright">사이트의 새로운 모든 구매평에 대해
+                                                        알림을 받습니다.</div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="새 구매평 알림" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','new_shop_qna')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    새 상품Q&A 알림 <div class="text-sm text-gray-bright">사이트의 새로운 모든 상품Q&A에
+                                                        대해 알림을 받습니다.</div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="새 상품Q&A 알림" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="tile" href="javascript:;"
+                                            onclick="ALARM_MENU.changeAlarmSetting($(this),'m20200420d39522c51fd20','new_shop_order')">
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    새 주문 알림 <div class="text-sm text-gray-bright">사이트에 새로운 주문이 있는 경우 알림을
+                                                        받습니다.</div>
+                                                    <div class="check">
+                                                        <div class="checkbox checkbox-styled">
+                                                            <label>
+                                                                <input title="새 주문 알림" type="checkbox" value="ok"
+                                                                    checked=checked><span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="site-alarm-body">
+            <!--//알림 리스트-->
+            <!--알림 설정-->
+        </div>
+    </div>
+</div>
+<!-- end#offcanvas-help -->
+
+<div id="pc_slide_menu_wrap" class="pc_slide_menu_container" style="width: 0; visibility: hidden; display: none">
+    <div id="pc_slide_menu" class="pc_slide_menu slide_menu _slide_menu">
+        <button type="button" class="pc-navbar-toggle" onclick="PC_SLIDE_MENU.slideNavToggle();"><i
+                class="btm bt-times"></i></button>
+        <div class="pc_slide_menu_logo">
+            <div class="pc_slide_menu_title"><a href="/">태화복지재단</a></div>
+
+        </div>
+        <ul class="nav navbar-nav">
+            <div class="viewport-nav pc _menu_wrap" style="position:relative">
+
+
+                <li style="" class="depth-01   ">
+                    <a class=" _fade_link " href="/taewha" data-url="taewha" data-has_child="Y" data-is_folder_menu="Y">
+                        <span class="plain_name" data-hover="">소개 </span>
+                    </a>
+                </li>
+
+                <li style="" class="depth-01   use_sub_name">
+                    <a class=" _fade_link " href="/actions" data-url="actions" data-has_child="Y"
+                        data-is_folder_menu="N">
+                        <span class="plain_name" data-hover="주요사업">사업</span>
+                    </a>
+                </li>
+
+                <li style="" class="depth-01   ">
+                    <a class=" _fade_link " href="/support" data-url="support" data-has_child="Y"
+                        data-is_folder_menu="Y">
+                        <span class="plain_name" data-hover="">후원 </span>
+                    </a>
+                </li>
+
+                <li style="" class="depth-01   ">
+                    <a class=" _fade_link " href="/news" data-url="news" data-has_child="Y" data-is_folder_menu="Y">
+                        <span class="plain_name" data-hover="">소식</span>
+                    </a>
+                </li>
+
+                <li style="" class="depth-01   ">
+                    <a class=" _fade_link " href="/events" data-url="events" data-has_child="Y" data-is_folder_menu="N">
+                        <span class="plain_name" data-hover="">태화 100년</span>
+                    </a>
+                </li>
+
+
+            </div>
+        </ul>
+
+    </div>
+</div>
+
+<style>
+    @import url("//vendor-cdn.imweb.me/css/kakao.css");
+    @import url("//vendor-cdn.imweb.me/css/montserrat.css");
+    @import url("//vendor-cdn.imweb.me/css/montserrat.css");
+
+    .pc_slide_menu_container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 0;
+        right: 0;
+        z-index: 9999;
+        visibility: visible !important;
+        display: block !important;
+    }
+
+    .pc_slide_menu_container .pc_slide_menu_title a {
+        font-family: montserrat;
+        font-size: 38px;
+        color: #fff;
+        word-wrap: break-word;
+        letter-spacing: 0px;
+        font-weight: bold;
+        font-style: ;
+    }
+
+    .pc_slide_menu_container .slide_menu_backdrop {
+        background: #000;
+        opacity: .5;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1100;
+    }
+
+    .pc_slide_menu_container .pc-navbar-toggle {
+        font-size: 16px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 9px 15px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .pc_slide_menu_container .pc-navbar-toggle:hover {
+        color: #ffffff;
+        ;
+    }
+
+    .pc_slide_menu_container .pc_slide_menu {
+        min-width: 0;
+        width: 300px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -300px;
+        background: #2f2f2f;
+        z-index: 9999;
+        padding: 40px 0 0 0;
+    }
+
+    .pc_slide_menu_container .pc_slide_menu.animation {
+        transition: transform 300ms ease 0s;
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    .pc_slide_menu_container.slide_open .pc_slide_menu {
+        transform: translate3d(300px, 0px, 0px);
+        overflow-y: auto;
+    }
+
+    .pc_slide_menu_container.right-slide .pc_slide_menu {
+        left: auto;
+        right: -300px;
+    }
+
+    .pc_slide_menu_container.right-slide .pc_slide_menu.animation {
+        transition: transform 300ms ease 0s;
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    .pc_slide_menu_container.right-slide.slide_open .pc_slide_menu {
+        transform: translate3d(-300px, 0px, 0px);
+    }
+
+    .pc_slide_menu_container .pc_slide_menu_logo {
+        text-align: center;
+        margin: 10px 0;
+        padding: 0 24px;
+    }
+
+    .pc_slide_menu_container .pc_slide_menu_logo img {
+        display: inline-block;
+        max-width: 100%;
+        height: 64px;
+        margin-bottom: 6px;
+        image-rendering: -webkit-optimize-contrast;
+
+    }
+
+    .pc_slide_menu_container .nav.navbar-nav {
+        float: none;
+        text-align: center;
+        padding: 0 24px;
+    }
+
+    .pc_slide_menu .viewport-nav li.use_sub_name:hover>a>.plain_name:before {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .pc_slide_menu_container .nav.navbar-nav:before {
+        content: '';
+        display: inline-block !important;
+        vertical-align: top;
+    }
+
+    .pc_slide_menu_container .nav.navbar-nav .viewport-nav {
+        max-width: 100%;
+        max-height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .pc_slide_menu_container .viewport-nav li>a {
+        font-family: montserrat, Kakao Light;
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.5);
+        padding: 2px 0;
+        display: inline-block;
+    }
+
+    .pc_slide_menu_container .viewport-nav li {}
+
+    .pc_slide_menu_container .viewport-nav li:first-child {
+        margin-top: 0;
+    }
+
+    .pc_slide_menu_container .viewport-nav li>a:hover {
+        color: #ffffff;
+    }
+
+    .pc_slide_menu_container .viewport-nav li.active>a {
+        color: #ffffff;
+    }
+</style>
+<div id="mobile_slide_menu_wrap" class="mobile_slide_menu_container">
+    <div id="mobile_slide_menu" class="mobile_slide_menu slide_menu _slide_menu">
+        <ul class="nav navbar-nav navbar-right">
+
+            <div class="viewport-nav mobile _menu_wrap " style="position:relative">
+                <!-- 모바일 메뉴서랍내 프로필 -->
+                <div class="profile-area ">
+                    <a class="btn profile no-padding btn-flat" href="javascript:;"
+                        onclick="SITE_MEMBER.editProfile('Lw%3D%3D');" onmouseup="MOBILE_SLIDE_MENU.slideNavToggle();">
+                        <input type='hidden' value='/common/img/app_login.png' id='imagepath' /> <img
+                            src="/common/img/default_profile.png" alt="">
+                        <div class="member-info">
+                            관리자 <div class="email-info">team@durumi.io</div>
+                        </div>
+                    </a>
+
+                    <div class="btn-group">
+                        <button type="button" class="navbar-toggle alarm-toggle alarm_icon" id="slide-alarm_mobile"
+                            onclick="ALARM_MENU.showAlarmSlide()"><i class="icon-bell"></i></button>
+                        <div class="dropdown navbar-toggle alarm-toggle profile-more">
+                            <button class="dropdown-toggle btn-flat" type="button" data-toggle="dropdown">
+                                <i class="icon-options-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="drop_mypage">
+                                <li>
+                                    <a href="javascript:;" onclick="SITE_MEMBER.editProfile('Lw%3D%3D');"
+                                        onmouseup="MOBILE_SLIDE_MENU.slideNavToggle();">내 계정</a>
+                                </li>
+                                <li>
+                                    <a href="/admin" class="center">관리</a>
+                                </li>
+                                <li>
+                                    <a href="/logout.cm?back_url=Lw%3D%3D">로그아웃</a>
+                                    <!--a href="">로그인</a-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <li style="" class="depth-01 ">
+                    <a href="/taewha" data-url="taewha" data-has_child="Y" data-is_folder_menu="Y" class=" " onclick="">
+                        <span class="plain_name" data-hover="">소개 </span>
+                        <span class="_toggle_btn toggle-btn"></span>
+                    </a>
+
+                    <ul>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="about" data-has_child="Y" data-is_folder_menu="Y" href="/about"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">태화복지재단은</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                            <ul>
+
+                                <li class="depth-03 " style="">
+                                    <a tabindex="-1" data-url="intro" data-has_child="N" data-is_folder_menu="N"
+                                        href="/intro" class=" " onclick="">
+                                        <span class="plain_name" data-hover="">큰 평화, 아름다운 조화</span>
+                                        <span class="_toggle_btn toggle-btn"></span>
+                                    </a>
+
+                                </li>
+
+                                <li class="depth-03 " style="">
+                                    <a tabindex="-1" data-url="history" data-has_child="Y" data-is_folder_menu="Y"
+                                        href="/history" class=" " onclick="">
+                                        <span class="plain_name" data-hover="">태화의 역사</span>
+                                        <span class="_toggle_btn toggle-btn"></span>
+                                    </a>
+
+                                    <ul>
+
+                                        <li class="depth-03 " style="">
+                                            <a tabindex="-1" data-url="footsteps" data-has_child="N"
+                                                data-is_folder_menu="N" href="/footsteps" class=" " onclick="">
+                                                <span class="plain_name" data-hover="">걸어온 길</span>
+                                                <span class="_toggle_btn toggle-btn"></span>
+                                            </a>
+
+                                        </li>
+
+                                        <li class="depth-03 " style="">
+                                            <a tabindex="-1" data-url="taewha_stories" data-has_child="Y"
+                                                data-is_folder_menu="N" href="/taewha_stories" class=" " onclick="">
+                                                <span class="plain_name" data-hover="">태화이야기</span>
+                                                <span class="_toggle_btn toggle-btn"></span>
+                                            </a>
+
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="24" data-has_child="N" data-is_folder_menu="N" href="/24"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">태화의 정신</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="greetings" data-has_child="N" data-is_folder_menu="N"
+                                href="/greetings" class=" " onclick="">
+                                <span class="plain_name" data-hover="">인사말</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="corporat" data-has_child="N" data-is_folder_menu="N"
+                                href="/corporat" class=" " onclick="">
+                                <span class="plain_name" data-hover="">법인구성</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="28" data-has_child="N" data-is_folder_menu="N" href="/28"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">투명경영</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="corporate_identity" data-has_child="N" data-is_folder_menu="N"
+                                href="/corporate_identity" class=" " onclick="">
+                                <span class="plain_name" data-hover="">CI</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="location" data-has_child="N" data-is_folder_menu="N"
+                                href="/location" class=" " onclick="">
+                                <span class="plain_name" data-hover="">오시는 길</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li style="" class="depth-01 use_sub_name">
+                    <a href="/actions" data-url="actions" data-has_child="Y" data-is_folder_menu="N" class=" "
+                        onclick="">
+                        <span class="plain_name" data-hover="주요사업">사업</span>
+                        <span class="_toggle_btn toggle-btn"></span>
+                    </a>
+
+                    <ul>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="31" data-has_child="N" data-is_folder_menu="N" href="/31"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">국내사회복지사업</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="32" data-has_child="N" data-is_folder_menu="N" href="/32"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">해외사회복지사업</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="33" data-has_child="N" data-is_folder_menu="N" href="/33"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">사회복지연구소</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="52" data-has_child="N" data-is_folder_menu="N" href="/52"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">새로운 메뉴</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li style="" class="depth-01 ">
+                    <a href="/support" data-url="support" data-has_child="Y" data-is_folder_menu="Y" class=" "
+                        onclick="">
+                        <span class="plain_name" data-hover="">후원 </span>
+                        <span class="_toggle_btn toggle-btn"></span>
+                    </a>
+
+                    <ul>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="individual_donation" data-has_child="N" data-is_folder_menu="N"
+                                href="/individual_donation" class=" " onclick="">
+                                <span class="plain_name" data-hover="">후원으로 함께 </span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="35" data-has_child="N" data-is_folder_menu="N" href="/35"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">기업(단체) 함께</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="36" data-has_child="N" data-is_folder_menu="N" href="/36"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">캠페인</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="37" data-has_child="N" data-is_folder_menu="N" href="/37"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">기금 후원</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li style="" class="depth-01 ">
+                    <a href="/news" data-url="news" data-has_child="Y" data-is_folder_menu="Y" class=" " onclick="">
+                        <span class="plain_name" data-hover="">소식</span>
+                        <span class="_toggle_btn toggle-btn"></span>
+                    </a>
+
+                    <ul>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="notices" data-has_child="N" data-is_folder_menu="N"
+                                href="/notices" class=" " onclick="">
+                                <span class="plain_name" data-hover="">공지사항</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="depth-02 " style="">
+                            <a tabindex="-1" data-url="board" data-has_child="Y" data-is_folder_menu="Y" href="/board"
+                                class=" " onclick="">
+                                <span class="plain_name" data-hover="">태화스토리</span>
+                                <span class="_toggle_btn toggle-btn"></span>
+                            </a>
+
+                            <ul>
+
+                                <li class="depth-03 " style="">
+                                    <a tabindex="-1" data-url="stories" data-has_child="N" data-is_folder_menu="N"
+                                        href="/stories" class=" " onclick="">
+                                        <span class="plain_name" data-hover="">섬김과 나눔 이야기</span>
+                                        <span class="_toggle_btn toggle-btn"></span>
+                                    </a>
+
+                                </li>
+
+                                <li class="depth-03 " style="">
+                                    <a tabindex="-1" data-url="newsletter" data-has_child="N" data-is_folder_menu="N"
+                                        href="/newsletter" class=" " onclick="">
+                                        <span class="plain_name" data-hover="">뉴스레터 </span>
+                                        <span class="_toggle_btn toggle-btn"></span>
+                                    </a>
+
+                                </li>
+
+                                <li class="depth-03 " style="">
+                                    <a tabindex="-1" data-url="press" data-has_child="N" data-is_folder_menu="N"
+                                        href="/press" class=" " onclick="">
+                                        <span class="plain_name" data-hover="">보도자료</span>
+                                        <span class="_toggle_btn toggle-btn"></span>
+                                    </a>
+
+                                </li>
+
+                                <li class="depth-03 " style="">
+                                    <a tabindex="-1" data-url="media" data-has_child="N" data-is_folder_menu="N"
+                                        href="/media" class=" " onclick="">
+                                        <span class="plain_name" data-hover="">미디어자료실</span>
+                                        <span class="_toggle_btn toggle-btn"></span>
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li style="" class="depth-01 ">
+                    <a href="/events" data-url="events" data-has_child="Y" data-is_folder_menu="N" class=" " onclick="">
+                        <span class="plain_name" data-hover="">태화 100년</span>
+                        <span class="_toggle_btn toggle-btn"></span>
+                    </a>
+
+                </li>
+
+
+            </div>
+        </ul>
+    </div>
+    <button type="button" class="navbar-toggle close slide-close" onclick="MOBILE_SLIDE_MENU.slideNavToggle();"><i
+            class="btm bt-times" aria-hidden="true"></i><span class="sr-only">닫기</span></button>
+</div>
+
+<ul class="dropdown-menu animation-dock member_profile" id="member_profile">
+    <li class="dropdown-profile text-center">
+        <a href="javascript:;" class="nav-btn-icon profile alarm-toggle _show_alarm"
+            onclick="ALARM_MENU.showAlarmSlide();" id="slide-alarm"
+            style="right: 0; position:absolute; right: 0; top:0; font-size:20px; padding:20px; "><i
+                class="icon-bell"></i><span class="sr-only">Alarm</span></a>
+        <span class="profile-info">
+            <div onclick="SITE_MEMBER.editProfile()">
+                <img src="/common/img/default_profile.png" class="img-circle dropdown-avatar-big _profile_img"
+                    alt="프로필 이미지">
+            </div>
+            <div class="sm-padding no-padding-bottom">
+                관리자 </div>
+            <small>소유자</small>
+        </span>
+    </li>
+    <li class="profile-footer btn-group-justified">
+        <a href="javascript:;" onclick="SITE_MEMBER.editProfile()" class="btn btn-flat">정보 수정</a>
+        <a href="/admin" class="btn btn-flat">관리</a> <a href="/logout.cm?back_url=Lw%3D%3D"
+            class="btn btn-flat right">로그아웃</a>
+    </li>
+</ul>
