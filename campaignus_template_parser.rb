@@ -40,7 +40,7 @@ File.open(original_html_directory, 'r') do |file|
     end
 
     if line.include?('</script></body>')
-      copied_file.print line.sub('</script></body>', '</script><script src="../../../modification.js"></script></body>')
+      copied_file.print line.sub('</script></body>', '</script><script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> <script src="../../../modification.js"></script> </body>')
     end
   end
 end

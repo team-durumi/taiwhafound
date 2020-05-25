@@ -186,3 +186,90 @@
     text-align: right;
   }
 }
+
+/* mozo rolling board */
+#section-4 {
+    margin-top: 100px;
+    background: #f0f0f0;
+    padding: 60px 0;
+}
+#section-4 ul {
+    padding-left:0;
+}
+.row-gap-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+.row-gap-0>[class*=col-] {
+    padding-left: 0;
+    padding-right: 0;
+}
+#section-4 .container-fluid {
+    max-width: 1400px;
+}
+#section-4 > div > div {
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    position: relative;
+}
+#section-4 .feed h3 {
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    line-height: 56px;
+    margin: 0;
+}
+#section-4 .feed {
+    position: relative;
+    margin: 35px 60px;
+    padding-left: 120px;
+}
+#section-4 .feed {
+    position: relative;
+    margin: 35px 60px;
+    padding-left: 120px;
+}
+#section-4 .feed .rolling-list li a {
+    display: block;
+    text-align: left;
+    color: #666;
+    line-height: 56px;
+    text-decoration: none;
+    margin-right: 35px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 18px;
+}
+#section-4 .feed .rolling-list nav {
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+#section-4 .feed .rolling-list nav a {
+    font-size: 10px;
+    display: block;
+    width: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+}
+.icon {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none !important;
+    transition: color .1s ease-in 0;
+    margin-top: -1px;
+}
+.text-ellipsis, .multitext-ellipsis-1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* mozo rolling board end */

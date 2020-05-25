@@ -8,3 +8,29 @@ $('.newsletter-privacy-content').click(function() {
   $('#w20200522f781b42ee003a').css('height','350px');
   $('#addFormw20200522f781b42ee003a').find("#privacy").find(".form-control").show();
 });
+
+
+// mozo rolling board
+$(function(){
+	$('.rolling-list').each(function(){
+	    console.log($('ul', this));
+	    var slider = $('ul', this).bxSlider({
+	        mode: 'vertical',
+	        minSlides: 2,
+	        pager: false,
+	        controls: false,
+	    });
+	    
+	    $('nav a:eq(0)', this).click(function(e){
+	        e.preventDefault();
+	        slider.goToPrevSlide();
+	        slider.stopAuto();
+	    });
+	    $('nav a:eq(1)', this).click(function(e){
+	        e.preventDefault();
+	        slider.goToNextSlide();
+	        slider.stopAuto();
+	    });
+	});
+});
+// mozo rolling board end
