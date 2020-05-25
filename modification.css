@@ -6,6 +6,104 @@
   text-shadow: 0.5px 0 0 #383838, -0.5px 0 0 #383838, 0 0.5px 0 #383838, 0 -0.5px 0 #383838, 0.5px 0.5px #383838, -0.5px -0.5px 0 #383838, 0.5px -0.5px 0 #383838, -0.5px 0.5px 0 #383838;
 }
 
+#w20200522f781b42ee003a {
+  background-color: black;
+  padding: 20px 100px;
+  position: relative;
+  height: 150px;
+}
+
+#w20200522f781b42ee003a .form-widget {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#w20200522f781b42ee003a .form-widget:before, #input_438cfbe3d37f1:before, #input_079ae4d1844bb:before {
+  content: '';
+  display: block;
+}
+#w20200522f781b42ee003a .form-widget:after, #input_438cfbe3d37f1:after, #input_079ae4d1844bb:after {
+  clear: both;
+}
+
+#w20200522f781b42ee003a form {
+  float: left;
+  width: 80%;
+}
+
+#addFormw20200522f781b42ee003a {
+
+}
+
+#w20200522f781b42ee003a .form.text-left {
+  float: left;
+  width: 20%;
+}
+
+#input_438cfbe3d37f1 {
+  width: 30%;
+  float: left;
+  margin-right: 1%;
+}
+
+#input_079ae4d1844bb {
+  width: 68%;
+  float: left;
+  margin-right: 1%;
+}
+
+#input_438cfbe3d37f1 label, #input_079ae4d1844bb label {
+  display: none;
+}
+#addFormw20200522f781b42ee003a #privacy label.control-label {
+  display: none;
+}
+#addFormw20200522f781b42ee003a #privacy .form-control {
+  display: none;
+}
+
+#input_438cfbe3d37f1 {
+  margin-bottom: 0 !important;
+}
+#addFormw20200522f781b42ee003a .form-control#input_txt_438cfbe3d37f1 {
+  border: none;
+  border-bottom: 2px solid #777777 !important;
+  margin-right: 1%;
+  background-color: black !important;
+  height: 40px;
+  color: white !important;
+}
+
+#addFormw20200522f781b42ee003a .form-control#input_txt_079ae4d1844bb {
+  border: none;
+  border-bottom: 2px solid #777777 !important;
+  background-color: black !important;
+  color: white !important;
+  height: 40px;
+}
+
+#addFormw20200522f781b42ee003a .privacy {
+  position: absolute;
+  top: 50px;
+}
+#addFormw20200522f781b42ee003a .privacy span {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#w20200522f781b42ee003a .form.text-left a {
+  border: 2px solid white;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+#w20200522f781b42ee003a .form.text-left a:hover {
+  border-width: 2px;
+}
+
 @media only screen and (max-width: 990px) {
   #visual_s202004203bc80f3af6ae5 h4 span {
     font-size: 20px !important;
