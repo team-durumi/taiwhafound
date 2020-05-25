@@ -1,0 +1,156 @@
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+$(function(){
+
+$('.rolling-list').each(function(){
+    console.log($('ul', this));
+    var slider = $('ul', this).bxSlider({
+        mode: 'vertical',
+        minSlides: 2,
+        pager: false,
+        controls: false,
+    });
+    
+    $('nav a:eq(0)', this).click(function(e){
+        e.preventDefault();
+        slider.goToPrevSlide();
+        slider.stopAuto();
+    });
+    $('nav a:eq(1)', this).click(function(e){
+        e.preventDefault();
+        slider.goToNextSlide();
+        slider.stopAuto();
+    });
+});
+
+});
+</script>
+<style>
+#section-4 {
+    margin-top: 100px;
+    background: #f0f0f0;
+    padding: 60px 0;
+}
+#section-4 ul {
+    padding-left:0;
+}
+.row-gap-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+.row-gap-0>[class*=col-] {
+    padding-left: 0;
+    padding-right: 0;
+}
+#section-4 .container-fluid {
+    max-width: 1400px;
+}
+#section-4 > div > div {
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    position: relative;
+}
+#section-4 .feed h3 {
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    line-height: 56px;
+    margin: 0;
+}
+#section-4 .feed {
+    position: relative;
+    margin: 35px 60px;
+    padding-left: 120px;
+}
+#section-4 .feed {
+    position: relative;
+    margin: 35px 60px;
+    padding-left: 120px;
+}
+#section-4 .feed .rolling-list li a {
+    display: block;
+    text-align: left;
+    color: #666;
+    line-height: 56px;
+    text-decoration: none;
+    margin-right: 35px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 18px;
+}
+#section-4 .feed .rolling-list nav {
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+#section-4 .feed .rolling-list nav a {
+    font-size: 10px;
+    display: block;
+    width: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+}
+.icon {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none !important;
+    transition: color .1s ease-in 0;
+    margin-top: -1px;
+}
+.text-ellipsis, .multitext-ellipsis-1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+</style>
+<div id="section-4" class="section">
+    <div class="container-fluid">
+        <div class="row row-gap-0">
+            <div class="col-md-6" style="border-right: 5px solid #f0f0f0">
+                <div id="home-notice-feed" class="feed clearfix">
+                    <h3>공지사항</h3>
+                    <div class="rolling-list">
+                        <ul class="bcp-slider ready">
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/34001/">개인정보처리방침(2019년 11월 7일~2020년 3월 19일)</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/35152/">개인정보처리방침(2020년 4월 1일~2020년 5월 14일)</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/35145/">개인정보처리방침 변경 안내</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/35140/">(사)국제앰네스티한국지부 개인후원 개발담당자 채용 공고</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/34289/">개인정보처리방침(2020년 3월 20일~2020년 3월 31일)</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/34001/">개인정보처리방침(2019년 11월 7일~2020년 3월 19일)</a></li>
+                        </ul>
+                        <nav>
+                            <a><span class="icon icon-arrow-up"></span></a>
+                            <a><span class="icon icon-arrow-down"></span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="home-group-feed" class="feed clearfix">
+                    <h3>그룹모임안내</h3>
+                    <div class="rolling-list">
+                        <ul class="bcp-slider ready">
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/involved/member/group-meeting/?bac=read&amp;bp=31952">앰네스티 22그룹 2020년 1월 정기모임 안내</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/involved/member/group-meeting/?bac=read&amp;bp=35328">앰네스티 22그룹 6월 정기모임 안내 - 화상회의</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/involved/member/group-meeting/?bac=read&amp;bp=34818">앰네스티 22그룹 5월 정기모임 안내 - 화상회의</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/involved/member/group-meeting/?bac=read&amp;bp=33969">앰네스티 22그룹 4월 정기모임 - 화상회의</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/involved/member/group-meeting/?bac=read&amp;bp=33055">[변경공지] 앰네스티 22그룹 3월 정기모임 - 화상회의</a></li>
+                            <li><a class="text-ellipsis" href="https://amnesty.or.kr/involved/member/group-meeting/?bac=read&amp;bp=31952">앰네스티 22그룹 2020년 1월 정기모임 안내</a></li>
+                        </ul>
+                        <nav>
+                            <a><span class="icon icon-arrow-up"></span></a>
+                            <a><span class="icon icon-arrow-down"></span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
