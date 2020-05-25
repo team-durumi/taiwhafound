@@ -38,6 +38,10 @@ File.open(original_html_directory, 'r') do |file|
     else
       copied_file.print line
     end
+
+    if line.include?('</script></body>')
+      copied_file.print line.sub('</script></body>', '</script><script src="../../../modification.js"></script></body>')
+    end
   end
 end
 
