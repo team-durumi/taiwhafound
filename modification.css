@@ -104,6 +104,106 @@
   border-width: 2px;
 }
 
+/*newsletter css for imweb template*/
+#w20200520df16d1c9118b1 {
+  background-color: black;
+  padding: 20px 100px;
+  position: relative;
+  height: 150px;
+}
+
+#w20200520df16d1c9118b1 .form-widget {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#w20200520df16d1c9118b1 .form-widget:before, #input_d324639c89a63:before, #input_da948fc6dabb2:before {
+  content: '';
+  display: block;
+}
+#w20200520df16d1c9118b1 .form-widget:after, #input_d324639c89a63:after, #input_da948fc6dabb2:after {
+  clear: both;
+}
+
+#w20200520df16d1c9118b1 form {
+  float: left;
+  width: 80%;
+}
+
+#addFormw20200520df16d1c9118b1 {
+
+}
+
+#w20200520df16d1c9118b1 .form.text-left {
+  float: left;
+  width: 20%;
+}
+
+#input_d324639c89a63 {
+  width: 30%;
+  float: left;
+  margin-right: 1%;
+}
+
+#input_da948fc6dabb2 {
+  width: 68%;
+  float: left;
+  margin-right: 1%;
+}
+
+#input_d324639c89a63 label, #input_da948fc6dabb2 label {
+  display: none;
+}
+#addFormw20200520df16d1c9118b1 #privacy label.control-label {
+  display: none;
+}
+#addFormw20200520df16d1c9118b1 #privacy .form-control {
+  display: none;
+}
+
+#input_d324639c89a63 {
+  margin-bottom: 0 !important;
+}
+#addFormw20200520df16d1c9118b1 .form-control#input_txt_d324639c89a63 {
+  border: none;
+  border-bottom: 2px solid #777777 !important;
+  margin-right: 1%;
+  background-color: black !important;
+  height: 40px;
+  color: white !important;
+}
+
+#addFormw20200520df16d1c9118b1 .form-control#input_txt_da948fc6dabb2 {
+  border: none;
+  border-bottom: 2px solid #777777 !important;
+  background-color: black !important;
+  color: white !important;
+  height: 40px;
+}
+
+#addFormw20200520df16d1c9118b1 .privacy {
+  position: absolute;
+  top: 50px;
+}
+#addFormw20200520df16d1c9118b1 .privacy span {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#w20200520df16d1c9118b1 .form.text-left a {
+  border: 2px solid white;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+#w20200520df16d1c9118b1 .form.text-left a:hover {
+  border-width: 2px;
+}
+/*newsletter css for imweb template end*/
+
 @media only screen and (max-width: 990px) {
   #visual_s202004203bc80f3af6ae5 h4 span {
     font-size: 20px !important;
