@@ -26,10 +26,21 @@
 
 
 /**
- * 슬라이드 텍스트
+ * 슬라이드 텍스트 / 변화의스토리 5개
  */
 
 #s2020051425ea6952aea18 .visual_section .text-wrap._text.fr-view {
+    max-width: 50%;
+    background-color: #000;
+    opacity: .7;
+    padding: 2rem;
+}
+
+/**
+ * 슬라이드 텍스트 / 해외사회복지사업 8개
+ */
+
+#s20200528611892ecf9d4e .visual_section .text-wrap._text.fr-view {
     max-width: 50%;
     background-color: #000;
     opacity: .7;
