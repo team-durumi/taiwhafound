@@ -22,7 +22,7 @@ $(function(){
 	        pager: false,
 	        controls: false,
 	    });
-	    
+
 	    $('nav a:eq(0)', this).click(function(e){
 	        e.preventDefault();
 	        slider.goToPrevSlide();
@@ -49,3 +49,16 @@ $('.newsletter-privacy-content').click(function() {
   $('#addFormw20200522f781b42ee003a').find("#privacy").find(".form-control").show();
 });
 // old main newsletter end
+
+// for imweb template
+$('#w202005202357d1b722819').parent('.col-dz').css('background-color', 'black');
+$('#input_txt_d324639c89a63').attr("placeholder", "이름");
+$('#input_txt_da948fc6dabb2').attr("placeholder", "이메일");
+$("#addFormw20200520df16d1c9118b1").find('.checkbox').append('<a style="margin:0 0 5px 10px;font-weight:bold;font-size:22px;display:inline-block;line-height:1.6;cursor:pointer;" class="newsletter-privacy-content">[보기]</a>');
+
+$('.newsletter-privacy-content').click(function() {
+  console.log('[보기] clicked!');
+  $('#w20200520df16d1c9118b1').css('height','350px');
+  $('#addFormw20200520df16d1c9118b1').find("#privacy").find(".form-control").show();
+});
+// for imweb template end

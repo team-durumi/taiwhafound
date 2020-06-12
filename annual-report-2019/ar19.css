@@ -1,0 +1,48 @@
+/**
+ * 슬라이더 비주얼섹션 #s2020051425ea6952aea18
+ */
+
+
+/**
+ * 슬라이드 양쪽 화살표
+ */
+
+#s2020051425ea6952aea18 .visual_section .owl-controls .owl-prev:before,
+#s2020051425ea6952aea18 .visual_section .owl-controls .owl-next:before,
+#s2020051425ea6952aea18 .visual_section .owl-controls .owl-buttons {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.custom_nav.nav_round .owl-controls .owl-nav>div:before {
+    border-radius: 80px;
+    border-width: 3px;
+    border-style: solid;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    background: transparent;
+}
+
+
+/**
+ * 슬라이드 텍스트 / 변화의스토리 5개
+ */
+
+#s2020051425ea6952aea18 .visual_section .text-wrap._text.fr-view {
+    max-width: 50%;
+    background-color: #000;
+    opacity: .7;
+    padding: 2rem;
+}
+
+/**
+ * 슬라이드 텍스트 / 해외사회복지사업 8개
+ */
+
+#s20200528611892ecf9d4e .visual_section .text-wrap._text.fr-view {
+    max-width: 50%;
+    background-color: #000;
+    opacity: .7;
+    padding: 2rem;
+}
