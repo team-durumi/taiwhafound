@@ -31,6 +31,10 @@ File.open(original_html_directory, 'r') do |file|
       copied_file.print line.sub('<link rel="canonical" href="https://taiwhafound.campaignus.me/" />', '<link rel="canonical" href="https://taiwhafound.campaignus.me/" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
     end
 
+    if line.include?('<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" />')
+      copied_file.print line.sub('<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" />', '<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
+    end
+
     if line.include?("href='/css")
       copied_file.print line.sub("href='/css", "href='https://taiwhafound.campaignus.me/css")
     elsif line.include?("src='/js")
