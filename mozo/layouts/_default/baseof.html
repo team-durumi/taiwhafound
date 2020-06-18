@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partialCached "head.html" . }}
+  <body class="page_ready doz_sys _body_menu_m20200420de6e1e44cb2ea mobile-nav-on mobile_nav_dep1 new_header_overlay_mobile page new_header_site loggedin" id="doz_body">
+    {{ partialCached "header/admin_navs.html" . }}
+    {{ partialCached "header/navbar.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partialCached "footer.html" . }}
+  </body>
+</html>

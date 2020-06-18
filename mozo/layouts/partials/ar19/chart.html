@@ -1,35 +1,33 @@
 <div class="container">
-    <h1 class="border-bottom py-2 my-3">chart!</h1>
     <div class="row">
         <div class="col-lg-6">
-            <h2 class="text-center my-4">2019 수입</h2>
+            <h4 class="text-center" style="margin: 2rem 0">2019 수입</h2>
             <div class="row">
-                <div class="col">
-                    <div class="chart-container" style="position: relative; height:32vh; width:32vw; left: -8vw;">
+                <div class="col-lg-6">
+                    <div class="chart-container">
                         <canvas id="chart-area"></canvas>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-lg-6">
                     <div id="chart-legends"></div>
                 </div>
             </div>
         </div>
         <div class="col-lg-6">
-            <h2 class="text-center my-4">2019 지출</h2>
+            <h4 class="text-center" style="margin: 2rem 0">2019 지출</h2>
             <div class="row">
-                <div class="col">
-                    <div class="chart-container" style="position: relative; height:32vh; width:32vw; left: -8vw;">
+                <div class="col-lg-6">
+                    <div class="chart-container">
                         <canvas id="chart-area2"></canvas>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-lg-6">
                     <div id="chart-legends2"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 <script>
@@ -76,13 +74,13 @@
                 },
                 legendCallback: function(chart) {
                     var text = [];
-                    text.push('<ul class="' + chart.id + '-legend list-unstyled pl-5 mt-4">');
+                    text.push('<ul class="legends ' + chart.id + '-legend list-unstyled pl-5">');
                     var data = chart.data;
                     var datasets = data.datasets;
                     var labels = data.labels;
                     if (datasets.length) {
                         for (var i = 0; i < datasets[0].data.length; ++i) {
-                            text.push('<li class="py-2"><span class="d-inline-block badge mr-2 mt-1" style="width: 1rem; height: 1rem; background-color:' + datasets[0].backgroundColor[i] + '"></span>');
+                            text.push('<li class="legend-item"><span class="legend-badge" style="background-color:' + datasets[0].backgroundColor[i] + '"></span>');
                             if (labels[i]) {
                                 // calculate percentage
                                 var total = datasets[0].data.reduce(function(previousValue, currentValue, currentIndex, array) {
@@ -141,13 +139,13 @@
                 },
                 legendCallback: function(chart) {
                     var text = [];
-                    text.push('<ul class="' + chart.id + '-legend list-unstyled pl-5 mt-4">');
+                    text.push('<ul class="legends ' + chart.id + '-legend list-unstyled pl-5 mt-4">');
                     var data = chart.data;
                     var datasets = data.datasets;
                     var labels = data.labels;
                     if (datasets.length) {
                         for (var i = 0; i < datasets[0].data.length; ++i) {
-                            text.push('<li class="py-2"><span class="d-inline-block badge mr-2 mt-1" style="width: 1rem; height: 1rem; background-color:' + datasets[0].backgroundColor[i] + '"></span>');
+                            text.push('<li class="legend-item"><span class="legend-badge" style="background-color:' + datasets[0].backgroundColor[i] + '"></span>');
                             if (labels[i]) {
                                 // calculate percentage
                                 var total = datasets[0].data.reduce(function(previousValue, currentValue, currentIndex, array) {
@@ -178,3 +176,29 @@
         };
     });
 </script>
+<style>
+.chart-container {
+    position: relative; height:28vh; width:28vw; left: -8vw;
+}
+.legends {
+    margin: 2rem 0;
+}
+.legend-item {
+    padding: .2rem;
+    font-size: 2rem;
+}
+.legend-badge {
+    display: inline-block; margin-right: 1rem;  width: 1rem; height: 1rem;
+}
+@media (max-width: 767.98px) {
+    .chart-container {
+        position: relative; height:auto; width:auto; left: auto;
+    }
+    .legend-item {
+        font-size: 14px;
+    }
+    .legends {
+        text-align: center;
+    }
+}
+</style>
