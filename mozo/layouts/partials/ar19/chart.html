@@ -100,7 +100,7 @@
                 tooltips: {
                     callbacks: {
                         label: function(tooltipItem, data) {
-                            return data.labels[tooltipItem.datasetIndex].replace(/(<([^>]+)>)/ig,"");
+                            return data.labels[tooltipItem.index].replace(/(<([^>]+)>)/ig,"");
                         }
                     }
                 }
@@ -172,7 +172,7 @@
                 tooltips: {
                     callbacks: {
                         label: function(tooltipItem, data) {
-                            return data.labels[tooltipItem.datasetIndex].replace(/(<([^>]+)>)/ig,"");
+                            return data.labels[tooltipItem.index].replace(/(<([^>]+)>)/ig,"");
                         }
                     }
                 }
