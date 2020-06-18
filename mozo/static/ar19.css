@@ -48,8 +48,15 @@
 }
 
 @media (max-width: 767.98px) {
-    #s2020051425ea6952aea18 .visual_section .text-wrap._text.fr-view,
-    #s20200528611892ecf9d4e .visual_section .text-wrap._text.fr-view {
-        display: none;
+    #s20200528611892ecf9d4e .owl-item .item,
+    #s20200528611892ecf9d4e .owl-item .item .header-content
+    #s2020051425ea6952aea18 .owl-item .item,
+    #s2020051425ea6952aea18 .owl-item .item .header-content {
+        height: 600px;
+    }
+    #s20200528611892ecf9d4e .text-wrap._text.fr-view,
+    #s2020051425ea6952aea18 .text-wrap._text.fr-view {
+        margin-top: 30px;
+        margin-left: 80px;
     }
 }
