@@ -14,4 +14,8 @@
     <loc>http://example.org/tags/</loc>
   </url>
   
+  <url>
+    <loc>http://example.org/annual-report-2019/</loc>
+  </url>
+  
 </urlset>
