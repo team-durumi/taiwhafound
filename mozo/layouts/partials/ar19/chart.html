@@ -55,12 +55,12 @@
                     label: 'Dataset 1'
                 }],
                 labels: [
-                    '보조금 22,371,232,904원',
-                    '사회복지사업수입 13,959,328,990원',
-                    '후원금 2,277,746,139원',
-                    '수익사업수입 7,817,563,507원',
-                    '기타수입 1,381,076,428원',
-                    '이월금 12,931,130,271원',
+                    '보조금 <span class="hide">22,371,232,904원</span>',
+                    '사회복지사업수입 <span class="hide">13,959,328,990원</span>',
+                    '후원금 <span class="hide">2,277,746,139원</span>',
+                    '수익사업수입 <span class="hide">7,817,563,507원</span>',
+                    '기타수입 <span class="hide">1,381,076,428원</span>',
+                    '이월금 <span class="hide">12,931,130,271원</span>',
                 ]
             },
             options: {
@@ -96,6 +96,13 @@
                     }
                     text.push('</ul>');
                     return text.join('');
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            return data.labels[tooltipItem.datasetIndex].replace(/(<([^>]+)>)/ig,"");
+                        }
+                    }
                 }
             }
         };
@@ -121,11 +128,11 @@
                     label: 'Dataset 2'
                 }],
                 labels: [
-                    '국내사업비 39,302,069,556원',
-                    '해외사업비 537,162,394원',
-                    '수익사업운영비 3,942,983,770원',
-                    '법인사업비 및 운영비 1,634,374,049원',
-                    '차기이월금 15,321,488,470원',
+                    '국내사업비 <span class="hide">39,302,069,556원</span>',
+                    '해외사업비 <span class="hide">537,162,394원</span>',
+                    '수익사업운영비 <span class="hide">3,942,983,770원</span>',
+                    '법인사업비 및 운영비 <span class="hide">1,634,374,049원</span>',
+                    '차기이월금 <span class="hide">15,321,488,470원</span>',
                 ]
             },
             options: {
@@ -161,6 +168,13 @@
                     }
                     text.push('</ul>');
                     return text.join('');
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            return data.labels[tooltipItem.datasetIndex].replace(/(<([^>]+)>)/ig,"");
+                        }
+                    }
                 }
             }
         };
