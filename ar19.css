@@ -36,7 +36,8 @@
     padding: 2rem;
 }
 @media (max-width: 767.98px) {
-    #s2020051425ea6952aea18 .visual_section .text-wrap._text.fr-view {
+    #s2020051425ea6952aea18 .visual_section .text-wrap._text.fr-view,
+    #s20200528611892ecf9d4e .visual_section .text-wrap._text.fr-view {
         display: none;
     }
 }
