@@ -7,56 +7,64 @@
  * 슬라이드 양쪽 화살표
  */
 
-#s2020051425ea6952aea18 .visual_section .owl-controls .owl-prev:before,
-#s2020051425ea6952aea18 .visual_section .owl-controls .owl-next:before,
-#s2020051425ea6952aea18 .visual_section .owl-controls .owl-buttons {
-    font-weight: 900;
-    font-size: 30px;
-}
-
-.custom_nav.nav_round .owl-controls .owl-nav>div:before {
-    border-radius: 80px;
-    border-width: 3px;
-    border-style: solid;
-    width: 50px;
-    height: 50px;
-    line-height: 45px;
-    background: transparent;
-}
-
-
-/**
- * 슬라이드 텍스트 / 변화의스토리 5개
- */
-
-#s2020051425ea6952aea18 .visual_section .text-wrap._text.fr-view {
-    max-width: 50%;
-    background-color: #000;
-    opacity: .7;
-    padding: 2rem;
-}
-
-/**
- * 슬라이드 텍스트 / 해외사회복지사업 8개
- */
-
-#s20200528611892ecf9d4e .visual_section .text-wrap._text.fr-view {
-    max-width: 50%;
-    background-color: #000;
-    opacity: .7;
-    padding: 2rem;
-}
-
-@media (max-width: 767.98px) {
-    #s20200528611892ecf9d4e .owl-item .item,
-    #s20200528611892ecf9d4e .owl-item .item .header-content
-    #s2020051425ea6952aea18 .owl-item .item,
-    #s2020051425ea6952aea18 .owl-item .item .header-content {
-        height: 600px;
-    }
-    #s20200528611892ecf9d4e .text-wrap._text.fr-view,
-    #s2020051425ea6952aea18 .text-wrap._text.fr-view {
-        margin-top: 30px;
-        margin-left: 80px;
-    }
-}
+ #s2020051425ea6952aea18 .visual_section .owl-controls .owl-prev:before,
+ #s2020051425ea6952aea18 .visual_section .owl-controls .owl-next:before,
+ #s2020051425ea6952aea18 .visual_section .owl-controls .owl-buttons {
+     font-weight: 900;
+     font-size: 30px;
+ }
+ 
+ .custom_nav.nav_round .owl-controls .owl-nav>div:before {
+     border-radius: 80px;
+     border-width: 3px;
+     border-style: solid;
+     width: 50px;
+     height: 50px;
+     line-height: 45px;
+     background: transparent;
+ }
+ 
+ 
+ /**
+  * 슬라이드 텍스트 / 변화의스토리 5개
+  */
+ 
+ #s2020051425ea6952aea18 .visual_section .text-wrap._text.fr-view {
+     max-width: 50%;
+     background-color: #000;
+     opacity: .7;
+     padding: 2rem;
+ }
+ 
+ /**
+  * 슬라이드 텍스트 / 해외사회복지사업 8개
+  */
+ 
+ #s20200528611892ecf9d4e .visual_section .text-wrap._text.fr-view {
+     max-width: 50%;
+     background-color: #000;
+     opacity: .7;
+     padding: 2rem;
+ }
+ 
+ 
+ @media (max-width: 767.98px) {
+     #s20200528611892ecf9d4e .owl-item .item,
+     #s20200528611892ecf9d4e .owl-item .item .header-content
+     #s2020051425ea6952aea18 .owl-item .item,
+     #s2020051425ea6952aea18 .owl-item .item .header-content {
+         height: 600px;
+     }
+     #s20200528611892ecf9d4e .text-wrap._text.fr-view,
+     #s2020051425ea6952aea18 .text-wrap._text.fr-view {
+         margin-top: 30px;
+         margin-left: 80px;
+         font-size: 12px;
+         line-height: 1.5;
+     }
+     #s20200528611892ecf9d4e .visual_section .header-content.m_ratio,
+     .new_header_overlay #s20200528611892ecf9d4e .visual_section .header-content.m_ratio {
+         height: 600px;
+         max-height: 600px;
+     }
+ }

@@ -59,5 +59,12 @@
     #s2020051425ea6952aea18 .text-wrap._text.fr-view {
         margin-top: 30px;
         margin-left: 80px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    #s20200528611892ecf9d4e .visual_section .header-content.m_ratio,
+    .new_header_overlay #s20200528611892ecf9d4e .visual_section .header-content.m_ratio {
+        height: 600px;
+        max-height: 600px;
     }
 }
