@@ -14,6 +14,24 @@
 전체 사이트맵 및 breadcrumb 전체 적용
 
 
+
 ## 추후작업
 
 - breadcrumb 전체 사진 교체
+- 국내사업 - 사업기관 이슈 http://www.taiwhafound.org/business/domestic/org_intro
+- 연혁관련 표기
+- fAQ 관련 처리
+
+## 연결 주소 참고
+
+1. 기본 후원 : https://secure.donus.org/taiwha/pay/step1_direct?dontype=G10101&period=pledge&price=20000&background=b001
+2. 캠페인 후원
+ 1) 코로나 19
+  -> https://secure.donus.org/taiwha/pay/step1_direct?dontype=C10201&period=pledge&price=20000&background=c001
+ 2) 빈곤아동
+ -> https://secure.donus.org/taiwha/pay/step1_direct?dontype=C10202&period=pledge&price=20000&background=c002
+
+## 이슈
+
+- 국내사업 자활/탭은 없는데 자료2건이 있음. https://taiwhafound.campaignus.me/91
+- 기업(단체)후원 문의하기 버튼은 문의폼을 만들지 말고, 단순한 방식으로 표시를 하면 좋겠습니다. (자주 입력되는 폼이 아닐 것으로 판단)
