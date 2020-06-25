@@ -19,8 +19,7 @@
 
 - breadcrumb 전체 사진 교체
 - 국내사업 - 사업기관 이슈 http://www.taiwhafound.org/business/domestic/org_intro
-- 연혁관련 표기
-- fAQ 관련 처리
+
 
 ## 연결 주소 참고
 

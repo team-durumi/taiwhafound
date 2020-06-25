@@ -16,7 +16,7 @@
 - [x] 태화클린신고센터 https://taiwhafound.campaignus.me/clean_taiwha
 - [x] 태화클린신고센터 -신고폼(폼) https://taiwhafound.campaignus.me/clean_taiwha_form 개인정보 수집 및 이용 동의 확인
 - [x] CI https://taiwhafound.campaignus.me/corporate_identity
-- [ ] 오시는 길 https://taiwhafound.campaignus.me/location (운짱)
+- [x] 오시는 길 https://taiwhafound.campaignus.me/location
 
 [사업- 국내사회복지사업] 
 - [x] 가족.지역사회 https://taiwhafound.campaignus.me/66 사진교체
@@ -48,9 +48,6 @@
 [소식]
 - [x] 공지사항
 - [x] 태화스토리(4개 카테고리)
-
-[태화100년]
-- [ ] 태화 100년 캠페인
 
 [Eng]
 
