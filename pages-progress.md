@@ -24,7 +24,7 @@
 - [x] 노인 https://taiwhafound.campaignus.me/68 사진교체
 - [x] 장애인 https://taiwhafound.campaignus.me/69 사진교체
 - [x] 자활 https://taiwhafound.campaignus.me/91 사진교체, 내용확인
-- [ ] 국내사업기관 https://taiwhafound.campaignus.me/70 이슈 #19 
+- [x] 국내사업기관 https://taiwhafound.campaignus.me/domestic_org_info 이슈 #19 
 
 
 [사업 - 해외사회복지사업]
