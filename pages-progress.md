@@ -9,7 +9,7 @@
 - [ ] 법인구성(조직도) https://taiwhafound.campaignus.me/59 #22  (썬)
 - [ ] 법인구성(함께하는 사람들) https://taiwhafound.campaignus.me/60 (운짱)
 
-[소개 - 투명경영이후]
+[소개 - 투명경영 이후]
 - [x] 재정보고 https://taiwhafound.campaignus.me/62 2018 년부터 아래로 8개 시안 확인 후 추가
 - [x] 운영보고 https://taiwhafound.campaignus.me/63 (비활성)
 - [x] 연차보고서 https://taiwhafound.campaignus.me/annual-report-2019
@@ -53,9 +53,9 @@
 
 [푸터]
 - [ ] 문의하기
-- [ ] 인재채용 - 인재상
-- [ ] 인재채용 - 채용공고
-- [ ] 인재채용 - 문의
+- [x] 인재채용 -  인재상  https://taiwhafound.campaignus.me/recruit_talented 태화정신에서 가져온 인재상 이미지
+- [x] 인재채용 -  채용공고  https://taiwhafound.campaignus.me/recruit_notices #24 프로세스 박스
+- [x] 인재채용 - 문의 https://taiwhafound.campaignus.me/recruit_form
 
 [기타]
 - [x] 애뉴얼리포트 /annual-report-2019
