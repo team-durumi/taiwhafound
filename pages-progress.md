@@ -40,19 +40,19 @@
 - [x] 연구소 자료 : https://taiwhafound.campaignus.me/93
 
 [후원]
-- [ ] 후원으로 함께 https://taiwhafound.campaignus.me/individual_donation #20 FAQ 적용(분칠필요)
-- [x] 기업(단체) 함께 https://taiwhafound.campaignus.me/35
-- [x] 캠페인 https://taiwhafound.campaignus.me/36  (진행중 / 지난 캠페인 버튼처럼 노출)
+- [x] 후원으로 함께 https://taiwhafound.campaignus.me/individual_donation 
+- [x] 기업(단체) 함께 https://taiwhafound.campaignus.me/how_to_organization_donation
+- [x] 캠페인 https://taiwhafound.campaignus.me/campaign
+- 지난 캠페인 목록 https://taiwhafound.campaignus.me/36/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&category=X3iM562062
+- 진행중인 캠페인 목록 https://taiwhafound.campaignus.me/36/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&category=q5ha6q8W48
 - [x] 기금후원 - 황윤석 기금 https://taiwhafound.campaignus.me/donation_for_steppingstone (사진교체)
 
 [소식]
 - [x] 공지사항
 - [x] 태화스토리(4개 카테고리)
 
-[Eng]
-
 [푸터]
-- [ ] 문의하기
+- [x] 문의하기 https://taiwhafound.campaignus.me/inquiry
 - [x] 인재채용 -  인재상  https://taiwhafound.campaignus.me/recruit_talented 태화정신에서 가져온 인재상 이미지
 - [x] 인재채용 -  채용공고  https://taiwhafound.campaignus.me/recruit_notices #24 프로세스 박스
 - [x] 인재채용 - 문의 https://taiwhafound.campaignus.me/recruit_form
