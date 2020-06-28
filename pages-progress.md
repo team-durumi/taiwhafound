@@ -40,10 +40,13 @@
 - [x] 라오스 지부 https://taiwhafound.campaignus.me/overseas_laos
 
 [사업 - 사회복지연구소]
-- [ ] 연구소 소개 https://taiwhafound.campaignus.me/74 연혁부분 추가
+- [x] 연구소 소개 https://taiwhafound.campaignus.me/lab_intro 
 - [x] 연구사업 : https://taiwhafound.campaignus.me/85
 - [x] 지원사업 : https://taiwhafound.campaignus.me/94
-- [ ] 지원사업- 게시판(세부 4P) : (운짱)
+- [x] 지원사업 - 섬김과 나눔 https://taiwhafound.campaignus.me/104
+- [x] 지원사업 - 수퍼비전 https://taiwhafound.campaignus.me/105
+- [x] 지원사업 - 휴지예플러스 https://taiwhafound.campaignus.me/106
+- [x] 지원사업 - 핵심사업 https://taiwhafound.campaignus.me/107
 - [x] 연구소 자료 : https://taiwhafound.campaignus.me/93
 
 [후원]
