@@ -520,6 +520,7 @@
   width: 50px;
   height: 50px;
   margin-left: -25px;
+  top: 20px;
 }
 
 #timeline .timeline-badge span.timeline-balloon-date-day {
@@ -604,7 +605,7 @@
   font-size: 1.3em;
 }
 
-#timeline .timeline-movement .timeline-item .timeline-panel.credits .timeline-panel-ul li img {
+#timeline .timeline-movement .timeline-item .timeline-panel .timeline-panel-ul li img {
   width: 100%;
   margin-top: 10px;
 }
