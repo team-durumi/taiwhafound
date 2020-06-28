@@ -503,7 +503,8 @@
   font-size: 1.2em;
   text-align: center;
   position: absolute;
-  top: 20px;
+  /*top: 20px;*/
+  top: 38px;
   left: 50%;
   /*margin-left: -25px;*/
   margin-left: -10px;
@@ -605,6 +606,7 @@
 
 #timeline .timeline-movement .timeline-item .timeline-panel.credits .timeline-panel-ul li img {
   width: 100%;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 768px) {
