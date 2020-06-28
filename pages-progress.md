@@ -3,9 +3,9 @@
 
 [소개 - 법인구성]
 
-- [x] 태화복지재단은 /intro
-- [ ] 태화의 정신 / https://taiwhafound.campaignus.me/24 #21  일러스트 진행 (혜원)
-- [ ] 태화의 역사-걸어온길 / #23 연혁표시 (썬)
+- [x] 태화복지재단은 https://taiwhafound.campaignus.me/intro
+- [x] 태화의 정신  https://taiwhafound.campaignus.me/spirit_of_taiwha
+- [x] 태화의 역사-걸어온길  https://taiwhafound.campaignus.me/77 #23 연혁표시
 - [x] 태화의 역사 - 최근 페이지로 링크 연결
 - [x] https://taiwhafound.campaignus.me/taewha_stories_2000_2020
 - [x] https://taiwhafound.campaignus.me/taewha_stories_1980_1999
@@ -13,8 +13,8 @@
 - [x] https://taiwhafound.campaignus.me/taewha_stories_1921_1949
 - [x] 인사말(대표이사) https://taiwhafound.campaignus.me/greeting_by_representative
 - [x] 인사말(홍보대사) https://taiwhafound.campaignus.me/greeting_by_honorary_ambassador
-- [ ] 법인구성(조직도) https://taiwhafound.campaignus.me/59 #22  (썬)
-- [ ] 법인구성(함께하는 사람들) https://taiwhafound.campaignus.me/60 (운짱)
+- [x] 법인구성(조직도) https://taiwhafound.campaignus.me/organization_chart
+- [x] 법인구성(함께하는 사람들) https://taiwhafound.campaignus.me/organization
 
 [소개 - 투명경영 이후]
 - [x] 재정보고 https://taiwhafound.campaignus.me/62 2018 년부터 아래로 8개 시안 확인 후 추가
