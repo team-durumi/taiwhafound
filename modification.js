@@ -1,3 +1,5 @@
+$('._use_policy_menu').css('font-weight', 'normal');
+
 // new main newsletter
 $('#w202006127198e308f465d').parent('.col-dz').css('background-color', 'black');
 $('#input_txt_438cfbe3d37f1').attr("placeholder", "이름");
