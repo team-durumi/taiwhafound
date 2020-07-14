@@ -613,7 +613,13 @@
 @media only screen and (max-width: 768px) {
   #timeline .timeline-badge.year-badge {
     top: -40px;
-  }  
+  }
 }
 
 /* timeline end */
+
+/*픽토그램 모바일 정렬*/
+
+#w20200625c8e216889f88a .widget.icon, #w20200625d4525d95b229d .widget.icon, #w20200626c4d96386d2233 .widget.icon, #w2020062628cd35a90627c .widget.icon, #w2020062607e66522a49b7 .widget.icon, #w2020062646c56804958fa .widget.icon {
+  display: block;
+}
