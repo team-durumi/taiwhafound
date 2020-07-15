@@ -1,0 +1,215 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h4 class="text-center" style="margin: 2rem 0">2019 수입</h4>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <canvas id="chart-area"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="chart-legends"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h4 class="text-center" style="margin: 2rem 0">2019 지출</h4>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <canvas id="chart-area2"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="chart-legends2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function(event) {
+        var config = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        28.25,
+                        45.31,
+                        10.99,
+                        13.75,
+                        1.70
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.orange,
+                        window.chartColors.yellow,
+                        window.chartColors.green,
+                        window.chartColors.blue
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    '사업수입 <span class="hide">13,981,080,718원</span>',
+                    '보조금수입 <span class="hide">22,426,115,755원</span>',
+                    '후원금품수입 <span class="hide">5,438,631,023원</span>',
+                    '수익사업수입 <span class="hide">6,804,729,423원</span>',
+                    '사업외수입 <span class="hide">840,987,828원</span>'
+                ]
+            },
+            options: {
+                responsive: true,
+                tooltips: {
+                    mode: 'index'
+                },
+                legend: {
+                    position: 'right',
+                    display: false,
+                },
+                legendCallback: function(chart) {
+                    var text = [];
+                    text.push('<ul class="legends ' + chart.id + '-legend list-unstyled pl-5">');
+                    var data = chart.data;
+                    var datasets = data.datasets;
+                    var labels = data.labels;
+                    if (datasets.length) {
+                        for (var i = 0; i < datasets[0].data.length; ++i) {
+                            text.push('<li class="legend-item"><span class="legend-badge" style="background-color:' + datasets[0].backgroundColor[i] + '"></span>');
+                            if (labels[i]) {
+                                // calculate percentage
+                                var total = datasets[0].data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                    return previousValue + currentValue;
+                                });
+                                var currentValue = datasets[0].data[i];
+                                var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+
+                                text.push(labels[i] + ' (' + percentage + '%)');
+                            }
+                            text.push('</li>');
+                        }
+                    }
+                    text.push('</ul>');
+                    return text.join('');
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            return data.labels[tooltipItem.index].replace(/(<([^>]+)>)/ig,"");
+                        }
+                    }
+                }
+            }
+        };
+
+        var config2 = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        78.20,
+                        12.76,
+                        1.75,
+                        7.29,
+                        0.00,
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.orange,
+                        window.chartColors.yellow,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                    ],
+                    label: 'Dataset 2'
+                }],
+                labels: [
+                    '사업수행비용 <span class="hide">37,855,823,623원</span>',
+                    '일반관리비용 <span class="hide">6,176,775,793원</span>',
+                    '모금비용 <span class="hide">848,744,192원</span>',
+                    '기타사업비용 <span class="hide">3,527,339,004원</span>',
+                    '사업외비용 <span class="hide">301,391원</span>',
+                ]
+            },
+            options: {
+                responsive: true,
+                tooltips: {
+                    mode: 'index'
+                },
+                legend: {
+                    position: 'right',
+                    display: false,
+                },
+                legendCallback: function(chart) {
+                    var text = [];
+                    text.push('<ul class="legends ' + chart.id + '-legend list-unstyled pl-5 mt-4">');
+                    var data = chart.data;
+                    var datasets = data.datasets;
+                    var labels = data.labels;
+                    if (datasets.length) {
+                        for (var i = 0; i < datasets[0].data.length; ++i) {
+                            text.push('<li class="legend-item"><span class="legend-badge" style="background-color:' + datasets[0].backgroundColor[i] + '"></span>');
+                            if (labels[i]) {
+                                // calculate percentage
+                                var total = datasets[0].data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                    return previousValue + currentValue;
+                                });
+                                var currentValue = datasets[0].data[i];
+                                var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+
+                                text.push(labels[i] + ' (' + percentage + '%)');
+                            }
+                            text.push('</li>');
+                        }
+                    }
+                    text.push('</ul>');
+                    return text.join('');
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            return data.labels[tooltipItem.index].replace(/(<([^>]+)>)/ig,"");
+                        }
+                    }
+                }
+            }
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById('chart-area').getContext('2d');
+            window.myPie = new Chart(ctx, config);
+            document.getElementById('chart-legends').innerHTML = window.myPie.generateLegend();
+
+            var ctx = document.getElementById('chart-area2').getContext('2d');
+            window.myPie2 = new Chart(ctx, config2);
+            document.getElementById('chart-legends2').innerHTML = window.myPie2.generateLegend();
+        };
+    });
+</script>
+<style>
+.chart-container {
+    position: relative; height:28vh; width:28vw; left: -8vw;
+}
+.legends {
+    margin: 2rem 0;
+}
+.legend-item {
+    padding: .2rem;
+    font-size: 2rem;
+}
+.legend-badge {
+    display: inline-block; margin-right: 1rem;  width: 1rem; height: 1rem;
+}
+@media (max-width: 767.98px) {
+    .chart-container {
+        position: relative; height:auto; width:auto; left: auto;
+    }
+    .legend-item {
+        font-size: 14px;
+    }
+    .legends {
+        text-align: center;
+    }
+}
+</style>
