@@ -20,30 +20,31 @@ $('.newsletter-privacy-content').click(function() {
 // new main newsletter end
 
 
-// mozo rolling board
-$(function(){
-	$('.rolling-list').each(function(){
-	    console.log($('ul', this));
-	    var slider = $('ul', this).bxSlider({
-	        mode: 'vertical',
-	        minSlides: 2,
-	        pager: false,
-	        controls: false,
-	    });
+//// main_page_board_slider_partial.html로 이전
+// // mozo rolling board
+// $(function(){
+// 	$('.rolling-list').each(function(){
+// 	    console.log($('ul', this));
+// 	    var slider = $('ul', this).bxSlider({
+// 	        mode: 'vertical',
+// 	        minSlides: 2,
+// 	        pager: false,
+// 	        controls: false,
+// 	    });
 
-	    $('nav a:eq(0)', this).click(function(e){
-	        e.preventDefault();
-	        slider.goToPrevSlide();
-	        slider.stopAuto();
-	    });
-	    $('nav a:eq(1)', this).click(function(e){
-	        e.preventDefault();
-	        slider.goToNextSlide();
-	        slider.stopAuto();
-	    });
-	});
-});
-// mozo rolling board end
+// 	    $('nav a:eq(0)', this).click(function(e){
+// 	        e.preventDefault();
+// 	        slider.goToPrevSlide();
+// 	        slider.stopAuto();
+// 	    });
+// 	    $('nav a:eq(1)', this).click(function(e){
+// 	        e.preventDefault();
+// 	        slider.goToNextSlide();
+// 	        slider.stopAuto();
+// 	    });
+// 	});
+// });
+// // mozo rolling board end
 
 // old main newsletter
 $('#w20200522703805e40dcb4').parent('.col-dz').css('background-color', 'black');

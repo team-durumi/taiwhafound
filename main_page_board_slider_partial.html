@@ -1,0 +1,119 @@
+<!-- 게시판 롤링 영역 (사이트에서 코드삽입 복붙으로 처리) -->
+<!-- <div id="rolling_board_section"></div> -->
+
+<div id="section-4" class="section">
+    <div class="container-fluid">
+        <div class="row row-gap-0">
+            <div class="col-md-6" style="border-right: 5px solid #f0f0f0">
+                <div id="home-notice-feed" class="feed clearfix">
+                    <h3>공지사항</h3>
+                    <div class="rolling-list">
+                        <ul class="bcp-slider ready">
+                            <!-- here -->
+                        </ul>
+                        <nav>
+                            <a><span class="icon icon-arrow-up"></span></a>
+                            <a><span class="icon icon-arrow-down"></span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="home-group-feed" class="feed clearfix">
+                    <h3>소식</h3>
+                    <div class="rolling-list">
+                        <ul class="bcp-slider ready">
+                            <!-- here -->
+                        </ul>
+                        <nav>
+                            <a><span class="icon icon-arrow-up"></span></a>
+                            <a><span class="icon icon-arrow-down"></span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+
+<script type="text/javascript">
+	// 공지사항 게시판
+	$(function(){
+		$.get( "https://taiwhafound.campaignus.me/125", function(data) {
+			var board_div = $(data).find('.li_board');
+			var board_list = $(board_div).find('ul.li_body.holder');
+
+			$.each(board_list, function(key, value) {
+				var href = $(value).find('li.tit').find('a.list_text_title').attr('href');
+				var title = $(value).find('li.tit').find('a.list_text_title').find('span').html();
+	      var html_string = `<li><a class="text-ellipsis" href="${href}">${title}</a></li>`;
+	      $(html_string).appendTo('#home-notice-feed .rolling-list ul.bcp-slider');
+			});
+
+			(function() {
+				$('#home-notice-feed .rolling-list').each(function(){
+			    // console.log($('ul', this));
+			    var slider = $('ul', this).bxSlider({
+			        mode: 'vertical',
+			        minSlides: 2,
+			        pager: false,
+			        controls: false,
+			    });
+
+			    $('nav a:eq(0)', this).click(function(e){
+			        e.preventDefault();
+			        slider.goToPrevSlide();
+			        slider.stopAuto();
+			    });
+			    $('nav a:eq(1)', this).click(function(e){
+			        e.preventDefault();
+			        slider.goToNextSlide();
+			        slider.stopAuto();
+			    });
+				});
+			})();
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	// 태화스토리 
+	$(function(){
+		$.get( "https://taiwhafound.campaignus.me/126", function(data) {
+			var board_div = $(data).find('#post_card_b20200708d280a3afb4908');
+			var board_list = $(board_div).find('.list-style-card.table-cell');
+
+			$.each(board_list, function(key, value) {
+				var href = $(value).find('.card a.post_link_wrap').attr('href');
+				var title = $(value).find('.card a.post_link_wrap .card-body .title.title-block').text().replace('공지','');
+	      var html_string = `<li><a class="text-ellipsis" href="${href}">${title}</a></li>`;
+	      $(html_string).appendTo('#home-group-feed .rolling-list ul.bcp-slider');
+			});
+
+			(function() {
+				$('#home-group-feed .rolling-list').each(function(){
+			    // console.log($('ul', this));
+			    var slider = $('ul', this).bxSlider({
+			        mode: 'vertical',
+			        minSlides: 2,
+			        pager: false,
+			        controls: false,
+			    });
+
+			    $('nav a:eq(0)', this).click(function(e){
+			        e.preventDefault();
+			        slider.goToPrevSlide();
+			        slider.stopAuto();
+			    });
+			    $('nav a:eq(1)', this).click(function(e){
+			        e.preventDefault();
+			        slider.goToNextSlide();
+			        slider.stopAuto();
+			    });
+				});
+			})();
+		});
+	});
+</script>
