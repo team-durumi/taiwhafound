@@ -3,12 +3,12 @@
 $(function(){
 
 $('.rolling-list').each(function(){
-    console.log($('ul', this));
     var slider = $('ul', this).bxSlider({
         mode: 'vertical',
         minSlides: 2,
         pager: false,
         controls: false,
+        touchEnabled: (navigator.maxTouchPoints > 0)
     });
     
     $('nav a:eq(0)', this).click(function(e){
