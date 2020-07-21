@@ -623,3 +623,15 @@
 #w20200625c8e216889f88a .widget.icon, #w20200625d4525d95b229d .widget.icon, #w20200626c4d96386d2233 .widget.icon, #w2020062628cd35a90627c .widget.icon, #w2020062607e66522a49b7 .widget.icon, #w2020062646c56804958fa .widget.icon {
   display: block;
 }
+
+/*픽토그램 모바일 정렬 end */
+
+/*각종 폼 css 칸 너비 등*/
+
+#addFormw20200708a0addadb7004c .phonenumber_wrap #input_num_103f0453ee8d5, #addFormw202006252369369dc0fa3 .phonenumber_wrap #input_num_103f0453ee8d5 {
+  width: 80px;
+}
+
+#addFormw20200626b21180cfc91d9 #input_select_pz32L7a5h4 {
+  font-size: 1.5rem;
+}
