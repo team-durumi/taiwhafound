@@ -41,7 +41,7 @@
 <script type="text/javascript">
 	// 공지사항 게시판
 	$(function(){
-		$.get( "https://taiwhafound.campaignus.me/125", function(data) {
+		$.get( "https://taiwhafound.campaignus.me/notices", function(data) {
 			var board_div = $(data).find('.li_board');
 			var board_list = $(board_div).find('ul.li_body.holder');
 
@@ -82,13 +82,13 @@
 <script type="text/javascript">
 	// 태화스토리 
 	$(function(){
-		$.get( "https://taiwhafound.campaignus.me/126", function(data) {
-			var board_div = $(data).find('#post_card_b20200708d280a3afb4908');
+		$.get( "https://taiwhafound.campaignus.me/taiwha_story", function(data) {
+			var board_div = $(data).find('.widget.board._list_wrap');
 			var board_list = $(board_div).find('.list-style-card.table-cell');
 
 			$.each(board_list, function(key, value) {
 				var href = $(value).find('.card a.post_link_wrap').attr('href');
-				var title = $(value).find('.card a.post_link_wrap .card-body .title.title-block').text().replace('공지','');
+				var title = $(value).find('.card a.post_link_wrap .card-body .title.title-block').clone().children().remove().end().text();
 	      var html_string = `<li><a class="text-ellipsis" href="${href}">${title}</a></li>`;
 	      $(html_string).appendTo('#home-group-feed .rolling-list ul.bcp-slider');
 			});
