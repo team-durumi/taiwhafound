@@ -26,18 +26,20 @@
 <script type="text/javascript">
 	$(window).scroll(function(){
 		var scrollBottom = $(document).height() - $(this).height() - $(this).scrollTop();
-
+		
 		if (scrollBottom < 300){
 			$('.btn_gobottom').hide();
 		} else{
 			$('.btn_gobottom').show();
 		}
 	});
-
-	$(document).ready(function() {
-    $('#downClick').click(function(){
-      $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-      return false;
-    });
+	var scrolled=0;
+	$(document).ready(function(){
+    $("#downClick").on("click" ,function(){
+      scrolled=scrolled+$(document).height()/5;
+			$('html, body').animate({
+        scrollTop:  scrolled
+		  });
+		});
 	});
 </script>
