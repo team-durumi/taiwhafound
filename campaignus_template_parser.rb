@@ -19,30 +19,40 @@ class CampaignusTemplateParser
     FileUtils.rm_rf(temp_dir)
     FileUtils.mkdir_p temp_dir
     # Dir.mkdir(temp_dir) unless File.exists?(temp_dir)
-
     new_filename = original_filename.split(".")[0] + "_" + g.log[0].to_s + "." + original_filename.split(".")[1]
-
     # FileUtils.cp(original_html_directory, temp_dir + new_filename)
-
     copied_html_directory = temp_dir + new_filename
-    # puts copied_html_directory
     copied_file = File.open(copied_html_directory, "w")
+
+    string =  '<link rel="canonical" href="https://taiwhafound.campaignus.me/' + "#{original_filename.split(".")[0]}" + '" />'
+    alt_string =  '<link rel="canonical" href="http://taiwhafound.org/' + "#{original_filename.split(".")[0]}" + '" />'
+    css_added_string = ' <link rel="stylesheet" type="text/css" href="../../../modification.css" />'
 
     File.open(original_html_directory, 'r') do |file|
       file.each do |line|
         if line.include?('<link rel="canonical" href="https://taiwhafound.campaignus.me/" />')
           copied_file.print line.sub('<link rel="canonical" href="https://taiwhafound.campaignus.me/" />', '<link rel="canonical" href="https://taiwhafound.campaignus.me/" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
+        elsif line.include?('<link rel="canonical" href="http://taiwhafound.org/" />')
+          copied_file.print line.sub('<link rel="canonical" href="http://taiwhafound.org/" />', '<link rel="canonical" href="http://taiwhafound.org/" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
         end
 
-        # new main
-        if line.include?('<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" />')
-          copied_file.print line.sub('<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" />', '<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
+        if line.include?(string)
+          # copied_file.print line.sub(string, string + css_added_string)
+          copied_file.print line.sub(string, css_added_string)
+        elsif line.include?(alt_string)
+          # copied_file.print line.sub(alt_string, alt_string + css_added_string)
+          copied_file.print line.sub(alt_string, css_added_string)
         end
 
-        # timeline page
-        if line.include?('<link rel="canonical" href="https://taiwhafound.campaignus.me/77" />')
-          copied_file.print line.sub('<link rel="canonical" href="https://taiwhafound.campaignus.me/77" />', '<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
-        end
+        # # new main
+        # if line.include?('<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" />')
+        #   copied_file.print line.sub('<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" />', '<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
+        # end
+
+        # # timeline page
+        # if line.include?('<link rel="canonical" href="https://taiwhafound.campaignus.me/77" />')
+        #   copied_file.print line.sub('<link rel="canonical" href="https://taiwhafound.campaignus.me/77" />', '<link rel="canonical" href="https://taiwhafound.campaignus.me/0611" /> <link rel="stylesheet" type="text/css" href="../../../modification.css" />')
+        # end
 
         if line.include?("href='/css")
           copied_file.print line.sub("href='/css", "href='https://taiwhafound.campaignus.me/css")
