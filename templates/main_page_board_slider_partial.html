@@ -48,7 +48,7 @@
 			$.each(board_list, function(key, value) {
 				var href = $(value).find('li.tit').find('a.list_text_title').attr('href');
 				var title = $(value).find('li.tit').find('a.list_text_title').find('span').html();
-	      var html_string = `<li><a class="text-ellipsis" href="${href}">${title}</a></li>`;
+	      var html_string = "<li><a class='text-ellipsis' href='" + href + "'>" + title + "</a></li>";
 	      $(html_string).appendTo('#home-notice-feed .rolling-list ul.bcp-slider');
 			});
 
@@ -89,7 +89,7 @@
 			$.each(board_list, function(key, value) {
 				var href = $(value).find('.card a.post_link_wrap').attr('href');
 				var title = $(value).find('.card a.post_link_wrap .card-body .title.title-block').clone().children().remove().end().text();
-	      var html_string = `<li><a class="text-ellipsis" href="${href}">${title}</a></li>`;
+	      var html_string = "<li><a class='text-ellipsis' href='" + href + "'>" + title + "</a></li>";
 	      $(html_string).appendTo('#home-group-feed .rolling-list ul.bcp-slider');
 			});
 
