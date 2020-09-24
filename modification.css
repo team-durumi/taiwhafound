@@ -325,24 +325,6 @@
     margin: 35px 60px;
     padding-left: 120px;
 }
-@media (max-width: 767px) {
-  #section-4 .feed {
-    position: relative;
-    margin: 15px !important;
-    padding-left: 0 !important;
-  }
-  #section-4 .feed h3 {
-    position: relative;
-  }
-  #section-4 .feed .rolling-list nav {
-    top: 80px;
-  }
-}
-#section-4 .feed {
-    position: relative;
-    margin: 35px 60px;
-    padding-left: 120px;
-}
 #section-4 .feed .rolling-list li a {
     display: block;
     text-align: left;
@@ -368,6 +350,19 @@
     text-align: center;
     color: #666;
     cursor: pointer;
+}
+@media (max-width: 767px) {
+  #section-4 .feed {
+    position: relative;
+    margin: 15px !important;
+    padding-left: 0 !important;
+  }
+  #section-4 .feed h3 {
+    position: relative;
+  }
+  #section-4 .feed .rolling-list nav {
+    top: 80px;
+  }
 }
 .icon {
     font-style: normal;
