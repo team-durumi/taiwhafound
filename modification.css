@@ -314,7 +314,7 @@
 }
 #section-4 .feed h3 {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: bold;
     position: absolute;
     left: 0;
     line-height: 56px;
@@ -328,6 +328,7 @@
 #section-4 .feed .rolling-list li a {
     display: block;
     text-align: left;
+    font-weight: bold;
     color: #666;
     line-height: 56px;
     text-decoration: none;
