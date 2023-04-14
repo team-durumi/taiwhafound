@@ -23,6 +23,8 @@
  2) 빈곤아동
  -> https://secure.donus.org/taiwha/pay/step1_direct?dontype=C10202&period=pledge&price=20000&background=c002
 
-## 이슈 
-
-
+## 푸터 코드에 넣어놨던 파일로드 부분을 삭제한 것으로 확인되어 되살려 놓음.
+```
+<link rel='stylesheet' type='text/css' href='https://happy-shirley-2b0472.netlify.app/modification.css'/>
+<link rel='stylesheet' type='text/css' href='https://happy-shirley-2b0472.netlify.app/modification.js'/>
+```
